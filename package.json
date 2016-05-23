@@ -14,7 +14,8 @@
     "power-assert": "^1.4.1"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-register --require intelli-espower-loader ./**/*-test.js"
+    "test": "mocha --compilers js:babel-register --require intelli-espower-loader ./**/*-test.js",
+    "clean-install": "rm -rf ./node_modules && npm cache clean && npm cache ls && rm -rf ~/.npm && npm install"
   },
   "author": "",
   "private": true,
