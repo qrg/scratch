@@ -2,7 +2,7 @@
 
 require('babel-register');
 
-import assert from 'power-assert';
+import test from 'ava';
 import fizzBuzz from './fizz-buzz';
 
 const answer30 = [
@@ -11,10 +11,6 @@ const answer30 = [
   'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz'
 ];
 
-describe('fizzBuzz', () => {
-  describe('fizzBuzz(30)', () => {
-    it('should be equal answer30', () => {
-      assert(fizzBuzz(30).join() === answer30.join());
-    });
-  });
+test('fizzBuzz(30) should be equal to answer30', t => {
+  t.is(fizzBuzz(30).join(), answer30.join());
 });
